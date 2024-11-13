@@ -1,0 +1,35 @@
+Exercise 3: Moon-te Carlo Methods 
+A Monte Carlo method is an algorithm that approximates the area of a region by taking a large sample of uniformly distributed points over an area that covers that region, and evaluating the proportion of points that fall inside it.
+
+For instance, consider the region bounded by the following condition:
+This region is shown shaded in white in the plot below.
+
+import numpy as np
+from matplotlib import pyplot as plt
+
+x = np.linspace(-1, 1, 100)
+y1 = (1-x**2)**0.5
+y2 = -(1-x**2)**0.5
+
+plt.plot(x, y1, color = 'white')
+plt.plot(x, y2, color = 'white')
+ax = plt.gca()
+ax.axis('equal')
+ax.set_facecolor('black')
+ax.fill_between(x, y1, y2, facecolor = 'white')
+plt.show()
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my GitHub page</title>
+</head>
+<body>
+    <h1>Welcome to my GitHub page</h1>
+    <p>This is a sample web page created for the Week 5 experiment task.</p>
+</body>
+</html>
+https://hub.comp-teach.qmul.ac.uk/user/ah24480/notebooks/teaching_material/MTH4000/Week%2005/Week%205%20Lab%20Workbook.ipynb
